@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Políticas | Bioingeniería</title>
     <style>
         :root {
-            --azul-oscuro: #0a1f3a; 
+            --azul-oscuro: #0a1f3a;
             --azul-acento: #1a3c63;
             --blanco: #ffffff;
             --plomo-claro: #f0f2f5;
@@ -10,13 +10,13 @@
             --verde-pdf: #198754;
         }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--plomo-claro); color: #333; line-height: 1.6; }
-        
+
         /* HEADER Y LOGOS */
         .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
         .logo-box { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
         .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        
+
         .journal-title-header { text-align: center; flex: 2; }
         .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
         .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
@@ -46,7 +46,7 @@
         .article-card h3 a:hover { color: var(--azul-acento); text-decoration: underline; }
         .authors { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95em; }
         .buttons-container { margin-top: 20px; display: flex; gap: 15px; }
-        
+
         /* BOTONES */
         .btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
         .btn-primary { background: var(--azul-oscuro); color: var(--blanco); border: 1px solid var(--azul-oscuro); }
@@ -108,19 +108,19 @@
         </div>
 
         <div class="policy-box">
-            <h3 style="color: var(--azul-oscuro); margin-top:0;">3. Frecuencia de Publicación</h3>
-            <p>La revista mantiene una periodicidad [Insertar periodicidad, ej. Semestral/Anual], publicando volúmenes regulares, con la posibilidad de emitir números especiales dedicados a temáticas emergentes.</p>
-        </div>
-
-        <div class="policy-box">
-            <h3 style="color: var(--azul-oscuro); margin-top:0;">4. Originalidad y Plagio</h3>
+            <h3 style="color: var(--azul-oscuro); margin-top:0;">3. Originalidad y Plagio</h3>
             <p>Los autores deben garantizar que sus trabajos son inéditos. La revista utiliza software especializado para la detección de similitudes. Aquellos manuscritos que superen el límite aceptable de coincidencia sin la debida citación serán rechazados automáticamente.</p>
         </div>
         
         <div class="policy-box">
-            <h3 style="color: var(--azul-oscuro); margin-top:0;">5. Plantilla y Envíos</h3>
-            <p>Los manuscritos deben enviarse respetando estrictamente el formato de la revista.
-            <br><br><a href="#" class="btn btn-primary" style="text-decoration:none;">📥 Descargar Plantilla Oficial (Word)</a></p>
+            <h3 style="color: var(--azul-oscuro); margin-top:0;">4. Plantilla, Envíos y Convocatoria</h3>
+            <p>Los manuscritos deben enviarse respetando estrictamente el formato de la revista. Asimismo, invitamos a la comunidad académica a revisar nuestra convocatoria actual para el envío de artículos científicos.</p>
+            
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <!-- Estos enlaces buscarán los archivos dentro de la nueva carpeta "archivos" -->
+                <a href="archivos/plantilla.docx" class="btn btn-primary" style="text-decoration:none;" download>📥 Descargar Plantilla Oficial (Word)</a>
+                <a href="archivos/convocatoria.pdf" class="btn btn-pdf" style="text-decoration:none;" target="_blank">📄 Descargar Convocatoria (PDF)</a>
+            </div>
         </div>
     </div>
     <footer>
