@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri</title>
     <style>
         :root {
-            --azul-oscuro: #0a1f3a;
+            --azul-oscuro: #0a1f3a; 
             --azul-acento: #1a3c63;
             --blanco: #ffffff;
             --plomo-claro: #f0f2f5;
@@ -10,35 +10,24 @@
             --verde-pdf: #198754;
         }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--plomo-claro); color: #333; line-height: 1.6; }
-
-        /* HEADER Y LOGOS */
         .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
         .logo-box { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
         .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
         .journal-title-header { text-align: center; flex: 2; }
         .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
         .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
-
-        /* NAVEGACIÓN */
         nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display:flex; justify-content: center; gap: 10px;}
         nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; border-radius: 4px; transition: background 0.3s; font-weight: 500; }
         nav a:hover { background-color: var(--azul-acento); }
-
-        /* CONTENEDOR PRINCIPAL */
         .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: var(--blanco); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; }
         .section-title { color: var(--azul-oscuro); border-bottom: 3px solid var(--azul-acento); padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em; }
-
-        /* SECCIÓN EDITORIAL */
         .editorial-section { background: #fdfbf7; border-left: 5px solid #d4af37; padding: 25px; margin-bottom: 40px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .editorial-title { margin-top: 0; color: var(--azul-oscuro); font-size: 1.6em; text-transform: uppercase;}
         .editorial-text { text-align: justify; margin-bottom: 20px; font-size: 1.05em; color: #444;}
         .signatures { display: flex; justify-content: space-between; margin-top: 30px; gap: 20px;}
         .signature-block { flex: 1; text-align: center; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 10px; }
         .signature-block strong { color: var(--azul-oscuro); display: block; font-size: 1.1em;}
-
-        /* TARJETAS DE ARTÍCULOS */
         .article-card { border: 1px solid var(--borde); border-radius: 8px; padding: 25px; margin-bottom: 20px; background: var(--blanco); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid var(--azul-oscuro); }
         .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .article-card h3 { margin-top: 0; font-size: 1.3em; }
@@ -46,26 +35,19 @@
         .article-card h3 a:hover { color: var(--azul-acento); text-decoration: underline; }
         .authors { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95em; }
         .buttons-container { margin-top: 20px; display: flex; gap: 15px; }
-
-        /* BOTONES */
         .btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
         .btn-primary { background: var(--azul-oscuro); color: var(--blanco); border: 1px solid var(--azul-oscuro); }
         .btn-primary:hover { background: var(--blanco); color: var(--azul-oscuro); }
         .btn-pdf { background: var(--blanco); color: var(--verde-pdf); border: 1px solid var(--verde-pdf); }
         .btn-pdf:hover { background: var(--verde-pdf); color: var(--blanco); }
-
-        /* LISTA ARCHIVOS */
         .archivo-lista { list-style: none; padding: 0; }
         .archivo-lista li { margin-bottom: 10px; }
         .archivo-lista a { display: block; padding: 15px; background: var(--plomo-claro); border: 1px solid var(--borde); border-radius: 5px; text-decoration: none; color: var(--azul-oscuro); font-weight: bold; transition: 0.2s;}
         .archivo-lista a:hover { background: var(--azul-acento); color: var(--blanco); }
-
-        /* EQUIPO Y POLÍTICAS */
         .miembro-equipo { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid var(--borde); }
         .miembro-equipo h4 { margin: 0 0 5px 0; color: var(--azul-oscuro); font-size: 1.2em; }
         .miembro-equipo p { margin: 0; color: var(--plomo-texto); }
         .policy-box { background: var(--plomo-claro); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-
         footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
     </style>
 <meta name="citation_author" content="Roxana Marca Mamani"><meta name="citation_author_institution" content="Investigador Instituto Superior Tecnológico Agroindustrial Sajama"><meta name="citation_author" content="Erick Martin Moron Galarza"><meta name="citation_author_institution" content="Universidad Técnica de Oruro - Investigador Museo de Historia Natural FCAN–UTO"><meta name="citation_title" content="Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri"><meta name="citation_journal_title" content="Bioingeniería"><meta name="citation_publication_date" content="2026/04/15"><meta name="citation_pdf_url" content="https://Ingenieria-Agricola-FCAN.github.io/bioingenieria/pdf/articulo_2.pdf"></head><body>
@@ -93,10 +75,10 @@
         <a href="equipo.html">👥 Equipo Editorial</a>
         <a href="politicas.html">⚖️ Políticas y Envíos</a>
     </nav>
-<div class="container"><h1 style="color: var(--azul-oscuro);">Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri</h1><div style="background: var(--plomo-claro); padding: 15px; border-radius: 8px; margin-bottom: 20px;"><h4 style="margin:0 0 10px 0;">Autores:</h4><ul style="list-style:none; padding:0; margin:0; line-height: 1.8;"><li><strong>Roxana Marca Mamani</strong> <a href="https://orcid.org/0009-0001-6375-5617" target="_blank" style="text-decoration:none;">🆔</a><br><small>Investigador Instituto Superior Tecnológico Agroindustrial Sajama</small></li><li><strong>Erick Martin Moron Galarza</strong> <a href="https://orcid.org/0009-0004-9039-1072" target="_blank" style="text-decoration:none;">🆔</a><br><small>Universidad Técnica de Oruro - Investigador Museo de Historia Natural FCAN–UTO</small></li></ul></div><h3 style="border-bottom: 2px solid var(--borde); padding-bottom: 5px;">Resumen</h3><p style="text-align: justify; font-size: 1.05em;">Evaluación del rendimiento agronómico y acumulación de biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) tras la adición de dosis diferenciadas de sustrato orgánico en ambiente controlado en la localidad de Opoqueri.</p><p><strong>Palabras clave:</strong> Forraje verde hidropónico, Hordeum vulgare, Sustrato orgánico, Biomasa, Opoqueri</p><br><a href="pdf/articulo_2.pdf" target="_blank" class="btn btn-pdf" style="font-size: 1.1em; padding: 15px 30px;">📄 Descargar Artículo en PDF</a></div>
+<div class="container"><h1 style="color: var(--azul-oscuro);">Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri</h1><div style="background: var(--plomo-claro); padding: 15px; border-radius: 8px; margin-bottom: 20px;"><h4 style="margin:0 0 10px 0;">Autores:</h4><ul style="list-style:none; padding:0; margin:0; line-height: 1.8;"><li><strong>Roxana Marca Mamani</strong> <a href="https://orcid.org/0009-0001-6375-5617" target="_blank" style="text-decoration:none;">🆔</a><br><small>Investigador Instituto Superior Tecnológico Agroindustrial Sajama</small></li><li><strong>Erick Martin Moron Galarza</strong> <a href="https://orcid.org/0009-0004-9039-1072" target="_blank" style="text-decoration:none;">🆔</a><br><small>Universidad Técnica de Oruro - Investigador Museo de Historia Natural FCAN–UTO</small></li></ul></div><h3 style="border-bottom: 2px solid var(--borde); padding-bottom: 5px;">Resumen</h3><p style="text-align: justify; font-size: 1.05em;">La producción de forraje verde hidropónico (FVH) se presenta como una alternativa tecnológica viable para zonas áridas con condiciones climáticas extremas que imposibilitan la producción forrajera convencional. El presente reporte de caso describe la implementación y evaluación del FVH de cebada (Hordeum vulgare) con sustrato sólido (humus y suelo agrícola en proporción 50:50) en comparación con un sistema convencional sin sustrato (solo agua), llevado a cabo en junio de 2025 en los viveros del Instituto Superior Tecnológico Agroindustrial Sajama, comunidad de Opoqueri, municipio de Corque, departamento de Oruro (altitud aproximada de 3.700 m s. n. m., temperatura media anual de 5–12 °C, precipitación anual de 300–400 mm). El objetivo fue cuantificar el efecto del sustrato sobre la biomasa producida durante en los primeros 17 días de cultivo. Los resultados evidenciaron que el grupo con sustrato alcanzó una biomasa aérea final de 2,39 kg/m2 en comparación con los 1,47 kg/m2 del grupo control (solo agua), lo que representa un incremento del 0,92 kg/m2 en biomasa aérea fresca. Adicionalmente, el sistema con sustrato permitió la realización de hasta tres cortes por ciclo de siembra durante un intervalo de 17 días, garantizando un suministro continuo de forraje sin necesidad de resembrar. Estos resultados demuestran el potencial del uso de sustratos orgánicos para incrementar la producción de FVH en condiciones áridas de altura, aunque se requieren estudios controlados con repeticiones para validar estadísticamente los hallazgos.</p><p><strong>Palabras clave:</strong> forraje verde hidropónico, altiplano boliviano, cebada, sustrato orgánico</p><br><a href="pdf/articulo_2.pdf" target="_blank" class="btn btn-pdf" style="font-size: 1.1em; padding: 15px 30px;">📄 Descargar Artículo en PDF</a></div>
     <footer>
         <p><strong>Revista Bioingeniería</strong> - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</p>
-        <p>Departamento de Ingeniería Agrícola y Recursos Naturales</p>
+        <p>Departamento de Ingeniería Agrícola, Recursos Naturales y Medio Ambiente</p>
         <p>&copy; 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0</p>
     </footer>
 </body></html>
