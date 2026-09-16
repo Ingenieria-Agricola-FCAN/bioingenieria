@@ -14,20 +14,29 @@
         /* HEADER Y LOGOS */
         .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
-        .logo-box { border: 1.5px dashed var(--borde); padding: 15px; border-radius: 8px; text-align: center; color: var(--plomo-texto); font-size: 0.85em; background: #fafafa; flex: 1; max-width: 200px; font-weight: bold; }
-        .logo-box:hover { background: #f0f0f0; border-color: var(--azul-oscuro); cursor: pointer; transition: 0.3s; }
+        .logo-box { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
+        .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
         .journal-title-header { text-align: center; flex: 2; }
         .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
         .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
 
         /* NAVEGACIÓN */
-        nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; margin: 0 5px; font-weight: 500; font-size: 1.05em; border-radius: 4px; transition: background 0.3s; }
+        nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display:flex; justify-content: center; gap: 10px;}
+        nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; border-radius: 4px; transition: background 0.3s; font-weight: 500; }
         nav a:hover { background-color: var(--azul-acento); }
 
         /* CONTENEDOR PRINCIPAL */
         .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: var(--blanco); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; }
         .section-title { color: var(--azul-oscuro); border-bottom: 3px solid var(--azul-acento); padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em; }
+
+        /* SECCIÓN EDITORIAL */
+        .editorial-section { background: #fdfbf7; border-left: 5px solid #d4af37; padding: 25px; margin-bottom: 40px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .editorial-title { margin-top: 0; color: var(--azul-oscuro); font-size: 1.6em; text-transform: uppercase;}
+        .editorial-text { text-align: justify; margin-bottom: 20px; font-size: 1.05em; color: #444;}
+        .signatures { display: flex; justify-content: space-between; margin-top: 30px; gap: 20px;}
+        .signature-block { flex: 1; text-align: center; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 10px; }
+        .signature-block strong { color: var(--azul-oscuro); display: block; font-size: 1.1em;}
 
         /* TARJETAS DE ARTÍCULOS */
         .article-card { border: 1px solid var(--borde); border-radius: 8px; padding: 25px; margin-bottom: 20px; background: var(--blanco); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid var(--azul-oscuro); }
@@ -45,6 +54,12 @@
         .btn-pdf { background: var(--blanco); color: var(--verde-pdf); border: 1px solid var(--verde-pdf); }
         .btn-pdf:hover { background: var(--verde-pdf); color: var(--blanco); }
 
+        /* LISTA ARCHIVOS */
+        .archivo-lista { list-style: none; padding: 0; }
+        .archivo-lista li { margin-bottom: 10px; }
+        .archivo-lista a { display: block; padding: 15px; background: var(--plomo-claro); border: 1px solid var(--borde); border-radius: 5px; text-decoration: none; color: var(--azul-oscuro); font-weight: bold; transition: 0.2s;}
+        .archivo-lista a:hover { background: var(--azul-acento); color: var(--blanco); }
+
         /* EQUIPO Y POLÍTICAS */
         .miembro-equipo { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid var(--borde); }
         .miembro-equipo h4 { margin: 0 0 5px 0; color: var(--azul-oscuro); font-size: 1.2em; }
@@ -53,22 +68,29 @@
 
         footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
     </style>
-<meta name="citation_author" content="Roxana Marca Mamani"><meta name="citation_author_institution" content="Investigador Instituto Superior Tecnológico Agroindustrial Sajama"><meta name="citation_author" content="Erick Martin Moron Galarza"><meta name="citation_author_institution" content="Universidad Técnica de Oruro - Investigador Museo de Historia Natural FCAN–UTO"><meta name="citation_title" content="Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri"><meta name="citation_journal_title" content="Bioingeniería"><meta name="citation_publication_date" content="2026/04/15"><meta name="citation_pdf_url" content="https://TU-USUARIO.github.io/bioingenieria/pdf/articulo_2.pdf"></head>
+<meta name="citation_author" content="Roxana Marca Mamani"><meta name="citation_author_institution" content="Investigador Instituto Superior Tecnológico Agroindustrial Sajama"><meta name="citation_author" content="Erick Martin Moron Galarza"><meta name="citation_author_institution" content="Universidad Técnica de Oruro - Investigador Museo de Historia Natural FCAN–UTO"><meta name="citation_title" content="Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri"><meta name="citation_journal_title" content="Bioingeniería"><meta name="citation_publication_date" content="2026/04/15"><meta name="citation_pdf_url" content="https://Ingenieria-Agricola-FCAN.github.io/bioingenieria/pdf/articulo_2.pdf"></head>
         <body>
     <div class="top-header">
         <div class="logos-container">
-            <div class="logo-box">[Insertar Logo UTO aquí]<br><small>150x150 px recomendado</small></div>
+            <div class="logo-box">
+                <img src="img/logo_uto.png" alt="Logo UTO" onerror="this.outerHTML='<span>Logo UTO (Subir logo_uto.png a carpeta img)</span>'">
+            </div>
             <div class="journal-title-header">
                 <h1>Revista Bioingeniería</h1>
                 <p>Órgano Oficial de Publicación Científica</p>
-                <p><small>ISSN: En trámite | Vol. 1 Núm. 1</small></p>
+                <p><small>ISSN: En trámite</small></p>
             </div>
-            <div class="logo-box">[Insertar Logo Depto. Ing. Agrícola RRNN]<br><small>150x150 px recomendado</small></div>
-            <div class="logo-box">[Insertar Logo Bioingeniería]<br><small>150x150 px recomendado</small></div>
+            <div class="logo-box">
+                <img src="img/logo_dpto.png" alt="Logo Depto" onerror="this.outerHTML='<span>Logo Dpto (Subir logo_dpto.png a carpeta img)</span>'">
+            </div>
+            <div class="logo-box">
+                <img src="img/logo_revista.png" alt="Logo Revista" onerror="this.outerHTML='<span>Logo Revista (Subir logo_revista.png a carpeta img)</span>'">
+            </div>
         </div>
     </div>
     <nav>
         <a href="index.html">🏠 Número Actual</a>
+        <a href="archivo.html">📚 Archivo de Ediciones</a>
         <a href="equipo.html">👥 Equipo Editorial</a>
         <a href="politicas.html">⚖️ Políticas y Envíos</a>
     </nav>
