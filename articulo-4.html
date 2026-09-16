@@ -1,70 +1,92 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro | Revista Bioingeniería</title>
-
-    <!-- METADATOS OBLIGATORIOS GOOGLE SCHOLAR -->
-    <meta name="citation_journal_title" content="Bioingeniería">
-    <meta name="citation_issn" content="En trámite">
-    <meta name="citation_title" content="Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro">
-    <meta name="citation_author" content="Alfredo Ancasi Mamani">
-    <meta name="citation_author_institution" content="Investigador en Cuencas de Altura FCAN–UTO">
-    <meta name="citation_author" content="Jhonny Antonio Bustamante Ocaña">
-    <meta name="citation_author_institution" content="Investigador Jefe de Gabinete de Informática FCAN–UTO">
-    <meta name="citation_publication_date" content="2026/04/15">
-    <meta name="citation_volume" content="1">
-    <meta name="citation_issue" content="1">
-    <meta name="citation_pdf_url" content="https://TU-USUARIO.github.io/bioingenieria/pdf/articulo_4.pdf">
-    <meta name="citation_abstract_html_url" content="https://TU-USUARIO.github.io/bioingenieria/articulo-4.html">
-    <meta name="citation_language" content="es">
-
-
-    <!-- METADATOS DUBLIN CORE (LIVRE, REDIB, LATINDEX) -->
-    <meta name="DC.title" content="Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro">
-    <meta name="DC.creator" content="Alfredo Ancasi Mamani">
-    <meta name="DC.creator" content="Jhonny Antonio Bustamante Ocaña">
-    <meta name="DC.issued" content="2026/04/15">
-    <meta name="DC.format" content="text/html">
-    <meta name="DC.publisher" content="Revista Bioingeniería">
-    <meta name="DC.identifier" content="https://TU-USUARIO.github.io/bioingenieria/articulo-4.html">
-
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro</title>
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.8; color: #2c3e50; max-width: 850px; margin: 40px auto; padding: 0 20px; background-color: #fcfcfc; }
-        header { border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-bottom: 30px; }
-        .nav-link { font-family: sans-serif; text-decoration: none; color: #2980b9; font-weight: bold; }
-        h1 { color: #1a252f; font-size: 1.8em; margin-bottom: 15px; }
-        .resumen { background: #f8f9fa; border-left: 4px solid #27ae60; padding: 20px; margin: 30px 0; border-radius: 4px; }
-        .btn-pdf { display: inline-block; background-color: #27ae60; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; font-family: sans-serif; margin-top: 15px; }
-        .btn-pdf:hover { background-color: #219150; }
-        footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 20px; font-size: 0.85em; color: #7f8c8d; text-align: center; font-family: sans-serif; }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="index.html" class="nav-link">← Volver al Número Actual</a> | 
-        <small>Revista <strong>Bioingeniería</strong> | Vol. 1 Núm. 1 (2026) | ISSN: En trámite</small>
-    </header>
-
-    <main>
-        <h1>Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro</h1>
-        <h3>Autores</h3>
-        <ul style="list-style:none; padding-left:0;"><li><strong>Alfredo Ancasi Mamani</strong> <a href="https://orcid.org/0009-0009-0556-5418" target="_blank" style="color:#27ae60; text-decoration:none;">(ORCID 🆔)</a><br><small>Investigador en Cuencas de Altura FCAN–UTO | ✉️ alam_fcapv@hotmail.com</small></li><li><strong>Jhonny Antonio Bustamante Ocaña</strong> <a href="https://orcid.org/0009-0008-5363-3705" target="_blank" style="color:#27ae60; text-decoration:none;">(ORCID 🆔)</a><br><small>Investigador Jefe de Gabinete de Informática FCAN–UTO | ✉️ jhonnybustamante675@gmail.com</small></li></ul>
+        :root {
+            --azul-oscuro: #0a1f3a; 
+            --azul-acento: #1a3c63;
+            --blanco: #ffffff;
+            --plomo-claro: #f0f2f5;
+            --plomo-texto: #555555;
+            --borde: #dcdcdc;
+            --verde-pdf: #198754;
+        }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--plomo-claro); color: #333; line-height: 1.6; }
         
-        <p><small><strong>Publicado:</strong> 2026/04/15</small></p>
+        /* HEADER Y LOGOS */
+        .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
+        .logo-box { border: 1.5px dashed var(--borde); padding: 15px; border-radius: 8px; text-align: center; color: var(--plomo-texto); font-size: 0.85em; background: #fafafa; flex: 1; max-width: 200px; font-weight: bold; }
+        .logo-box:hover { background: #f0f0f0; border-color: var(--azul-oscuro); cursor: pointer; transition: 0.3s; }
+        .journal-title-header { text-align: center; flex: 2; }
+        .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
+        .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
 
-        <div class="resumen">
-            <h4 style="margin-top:0;">Resumen</h4>
-            <p>Aplicación de fotogrametría aérea mediante VANT (drones) para la generación de modelos digitales de alta resolución orientados al análisis espacial e identificación de indicadores de fragilidad ambiental en la zona de Iroco.</p>
-            <p><strong>Palabras clave:</strong> Fotogrametría, VANT, Análisis espacial, Fragilidad ambiental, Iroco, Oruro</p>
+        /* NAVEGACIÓN */
+        nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; margin: 0 5px; font-weight: 500; font-size: 1.05em; border-radius: 4px; transition: background 0.3s; }
+        nav a:hover { background-color: var(--azul-acento); }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: var(--blanco); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; }
+        .section-title { color: var(--azul-oscuro); border-bottom: 3px solid var(--azul-acento); padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em; }
+
+        /* TARJETAS DE ARTÍCULOS */
+        .article-card { border: 1px solid var(--borde); border-radius: 8px; padding: 25px; margin-bottom: 20px; background: var(--blanco); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid var(--azul-oscuro); }
+        .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .article-card h3 { margin-top: 0; font-size: 1.3em; }
+        .article-card h3 a { color: var(--azul-oscuro); text-decoration: none; }
+        .article-card h3 a:hover { color: var(--azul-acento); text-decoration: underline; }
+        .authors { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95em; }
+        .buttons-container { margin-top: 20px; display: flex; gap: 15px; }
+        
+        /* BOTONES */
+        .btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
+        .btn-primary { background: var(--azul-oscuro); color: var(--blanco); border: 1px solid var(--azul-oscuro); }
+        .btn-primary:hover { background: var(--blanco); color: var(--azul-oscuro); }
+        .btn-pdf { background: var(--blanco); color: var(--verde-pdf); border: 1px solid var(--verde-pdf); }
+        .btn-pdf:hover { background: var(--verde-pdf); color: var(--blanco); }
+
+        /* EQUIPO Y POLÍTICAS */
+        .miembro-equipo { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid var(--borde); }
+        .miembro-equipo h4 { margin: 0 0 5px 0; color: var(--azul-oscuro); font-size: 1.2em; }
+        .miembro-equipo p { margin: 0; color: var(--plomo-texto); }
+        .policy-box { background: var(--plomo-claro); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+
+        footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
+    </style>
+<meta name="citation_author" content="Alfredo Ancasi Mamani"><meta name="citation_author_institution" content="Investigador en Cuencas de Altura FCAN–UTO"><meta name="citation_author" content="Jhonny Antonio Bustamante Ocaña"><meta name="citation_author_institution" content="Investigador Jefe de Gabinete de Informática FCAN–UTO"><meta name="citation_title" content="Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro"><meta name="citation_journal_title" content="Bioingeniería"><meta name="citation_publication_date" content="2026/04/15"><meta name="citation_pdf_url" content="https://TU-USUARIO.github.io/bioingenieria/pdf/articulo_4.pdf"></head>
+        <body>
+    <div class="top-header">
+        <div class="logos-container">
+            <div class="logo-box">[Insertar Logo UTO aquí]<br><small>150x150 px recomendado</small></div>
+            <div class="journal-title-header">
+                <h1>Revista Bioingeniería</h1>
+                <p>Órgano Oficial de Publicación Científica</p>
+                <p><small>ISSN: En trámite | Vol. 1 Núm. 1</small></p>
+            </div>
+            <div class="logo-box">[Insertar Logo Depto. Ing. Agrícola RRNN]<br><small>150x150 px recomendado</small></div>
+            <div class="logo-box">[Insertar Logo Bioingeniería]<br><small>150x150 px recomendado</small></div>
         </div>
-
-        <a href="pdf/articulo_4.pdf" class="btn-pdf" target="_blank">📄 Descargar Artículo Completo (PDF)</a>
-    </main>
-
+    </div>
+    <nav>
+        <a href="index.html">🏠 Número Actual</a>
+        <a href="equipo.html">👥 Equipo Editorial</a>
+        <a href="politicas.html">⚖️ Políticas y Envíos</a>
+    </nav>
+<div class="container">
+            <h1 style="color: var(--azul-oscuro);">Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro</h1>
+            <div style="background: var(--plomo-claro); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <h4 style="margin:0 0 10px 0;">Autores:</h4>
+                <ul style="list-style:none; padding:0; margin:0; line-height: 1.8;"><li><strong>Alfredo Ancasi Mamani</strong> <a href="https://orcid.org/0009-0009-0556-5418" target="_blank" style="text-decoration:none;">🆔</a><br><small>Investigador en Cuencas de Altura FCAN–UTO</small></li><li><strong>Jhonny Antonio Bustamante Ocaña</strong> <a href="https://orcid.org/0009-0008-5363-3705" target="_blank" style="text-decoration:none;">🆔</a><br><small>Investigador Jefe de Gabinete de Informática FCAN–UTO</small></li></ul>
+            </div>
+            <h3 style="border-bottom: 2px solid var(--borde); padding-bottom: 5px;">Resumen</h3>
+            <p style="text-align: justify; font-size: 1.05em;">Aplicación de fotogrametría aérea mediante VANT (drones) para la generación de modelos digitales de alta resolución orientados al análisis espacial e identificación de indicadores de fragilidad ambiental en la zona de Iroco.</p>
+            <p><strong>Palabras clave:</strong> Fotogrametría, VANT, Análisis espacial, Fragilidad ambiental, Iroco, Oruro</p>
+            <br>
+            <a href="pdf/articulo_4.pdf" target="_blank" class="btn btn-pdf" style="font-size: 1.1em; padding: 15px 30px;">📄 Descargar Artículo en PDF</a>
+        </div>
     <footer>
-        <p>&copy; 2026 Revista Bioingeniería. Publicación de Acceso Abierto bajo licencia Creative Commons BY-NC 4.0.</p>
+        <p><strong>Revista Bioingeniería</strong> - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</p>
+        <p>Departamento de Ingeniería Agrícola y Recursos Naturales</p>
+        <p>&copy; 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0</p>
     </footer>
-</body>
-</html>
+</body></html>
