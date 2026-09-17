@@ -1,84 +1,198 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Bioingeniería | Inicio</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Bioingeniería (BioIng) | UTO</title>
+    
+    <!-- Metadatos de Verificación y Académicos para Google Search Console y Scholar -->
+    <meta name="citation_journal_title" content="Revista Bioingeniería">
+    <meta name="citation_publisher" content="Universidad Técnica de Oruro">
+    <meta name="citation_language" content="es">
+    
     <style>
         :root {
-            --azul-oscuro: #0a1f3a; 
-            --azul-acento: #1a3c63;
-            --blanco: #ffffff;
-            --plomo-claro: #f0f2f5;
-            --plomo-texto: #555555;
-            --borde: #dcdcdc;
-            --verde-pdf: #198754;
+            --primary: #2c3e50;
+            --accent: #27ae60;
+            --secondary: #2980b9;
+            --bg: #f8f9fa;
         }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--plomo-claro); color: #333; line-height: 1.6; }
-        .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
-        .logo-box { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
-        .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        .journal-title-header { text-align: center; flex: 2; }
-        .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
-        .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
-        nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display:flex; justify-content: center; gap: 10px;}
-        nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; border-radius: 4px; transition: background 0.3s; font-weight: 500; }
-        nav a:hover { background-color: var(--azul-acento); }
-        .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: var(--blanco); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; }
-        .section-title { color: var(--azul-oscuro); border-bottom: 3px solid var(--azul-acento); padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em; }
-        .editorial-section { background: #fdfbf7; border-left: 5px solid #d4af37; padding: 25px; margin-bottom: 40px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .editorial-title { margin-top: 0; color: var(--azul-oscuro); font-size: 1.6em; text-transform: uppercase;}
-        .editorial-text { text-align: justify; margin-bottom: 20px; font-size: 1.05em; color: #444;}
-        .signatures { display: flex; justify-content: space-between; margin-top: 30px; gap: 20px;}
-        .signature-block { flex: 1; text-align: center; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 10px; }
-        .signature-block strong { color: var(--azul-oscuro); display: block; font-size: 1.1em;}
-        .article-card { border: 1px solid var(--borde); border-radius: 8px; padding: 25px; margin-bottom: 20px; background: var(--blanco); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid var(--azul-oscuro); }
-        .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .article-card h3 { margin-top: 0; font-size: 1.3em; }
-        .article-card h3 a { color: var(--azul-oscuro); text-decoration: none; }
-        .article-card h3 a:hover { color: var(--azul-acento); text-decoration: underline; }
-        .authors { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95em; }
-        .buttons-container { margin-top: 20px; display: flex; gap: 15px; }
-        .btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
-        .btn-primary { background: var(--azul-oscuro); color: var(--blanco); border: 1px solid var(--azul-oscuro); }
-        .btn-primary:hover { background: var(--blanco); color: var(--azul-oscuro); }
-        .btn-pdf { background: var(--blanco); color: var(--verde-pdf); border: 1px solid var(--verde-pdf); }
-        .btn-pdf:hover { background: var(--verde-pdf); color: var(--blanco); }
-        .archivo-lista { list-style: none; padding: 0; }
-        .archivo-lista li { margin-bottom: 10px; }
-        .archivo-lista a { display: block; padding: 15px; background: var(--plomo-claro); border: 1px solid var(--borde); border-radius: 5px; text-decoration: none; color: var(--azul-oscuro); font-weight: bold; transition: 0.2s;}
-        .archivo-lista a:hover { background: var(--azul-acento); color: var(--blanco); }
-        .miembro-equipo { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid var(--borde); }
-        .miembro-equipo h4 { margin: 0 0 5px 0; color: var(--azul-oscuro); font-size: 1.2em; }
-        .miembro-equipo p { margin: 0; color: var(--plomo-texto); }
-        .policy-box { background: var(--plomo-claro); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #333; line-height: 1.6; }
+        
+        /* Navegación Header */
+        header { background-color: var(--primary); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        header h1 { margin: 0; font-size: 1.5em; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+
+        /* Sección Hero (Carátula y Objetivo) */
+        .hero-section {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .hero-img {
+            flex: 1 1 350px;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+        .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-content { flex: 2 1 400px; padding: 35px; }
+        .hero-content h2 { color: var(--primary); margin-top: 0; border-bottom: 30px; }
+        .hero-content p { font-size: 1.05em; color: #555; }
+        
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn-cta:hover { background-color: #219150; }
+
+        /* Tarjeta de Artículo con Estadísticas */
+        .article-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+        }
+        .article-card h3 { margin-top: 0; color: var(--primary); }
+        .meta-info { font-size: 0.9em; color: #666; margin-bottom: 15px; }
+        
+        .stats-box {
+            display: flex;
+            gap: 20px;
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 6px;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .stat-item { font-size: 1.05em; font-weight: bold; color: var(--primary); }
+        .stat-item span { color: var(--secondary); font-size: 1.2em; }
+
+        .btn-download-report {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .btn-download-report:hover { background-color: #1f6391; }
+
+        /* Footer con ÚNICAMENTE los 3 logos requeridos */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .footer-logos img {
+            height: 42px;
+            background: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: transform 0.3s;
+        }
+        .footer-logos img:hover { transform: scale(1.08); }
+        .copyright { font-size: 0.85em; opacity: 0.8; margin-top: 15px; }
     </style>
-</head><body>
-    <div class="top-header">
-        <div class="logos-container">
-            <div class="logo-box">
-                <img src="img/logo_uto.png" alt="Logo UTO" onerror="this.outerHTML='<span>Logo UTO (Subir logo_uto.png a carpeta img)</span>'">
-            </div>
-            <div class="journal-title-header">
-                <h1>Revista Bioingeniería</h1>
-                <p>Órgano Oficial de Publicación Científica</p>
-                <p><small>ISSN: En trámite</small></p>
-            </div>
-            <div class="logo-box">
-                <img src="img/logo_dpto.png" alt="Logo Depto" onerror="this.outerHTML='<span>Logo Dpto (Subir logo_dpto.png a carpeta img)</span>'">
-            </div>
-            <div class="logo-box">
-                <img src="img/logo_revista.png" alt="Logo Revista" onerror="this.outerHTML='<span>Logo Revista (Subir logo_revista.png a carpeta img)</span>'">
-            </div>
+</head>
+<body>
+
+<header>
+    <h1>Revista Bioingeniería</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="politicas.html">Políticas Editoriales</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Sección Carátula u Objetivo de la Revista -->
+    <div class="hero-section">
+        <div class="hero-img">
+            <!-- Si tienes la imagen de la carátula en tu carpeta, reemplaza 'caratula.jpg' -->
+            <img src="caratula.jpg" alt="Carátula Revista Bioingeniería" onerror="this.src='https://via.placeholder.com/400x500?text=Car%C3%A1tula+BioIng'">
+        </div>
+        <div class="hero-content">
+            <h2>Objetivo de la Revista</h2>
+            <p>La <strong>Revista Bioingeniería (BioIng)</strong> es un órgano de difusión científica revisado por pares de acceso abierto, editado por el Departamento de Ingeniería Agrícola, Recursos Naturales y Medio Ambiente de la Universidad Técnica de Oruro. Nuestro objetivo es promover, visibilizar y difundir investigaciones originales e innovaciones tecnológicas orientadas a la sostenibilidad ambiental, agroecología, energías renovables y gestión de recursos naturales.</p>
+            <a href="politicas.html" class="btn-cta">📄 Conocer Políticas Editoriales</a>
         </div>
     </div>
-    <nav>
-        <a href="index.html">🏠 Número Actual</a>
-        <a href="archivo.html">📚 Archivo de Ediciones</a>
-        <a href="equipo.html">👥 Equipo Editorial</a>
-        <a href="politicas.html">⚖️ Políticas y Envíos</a>
-    </nav>
-<div class="container"> <div class="editorial-section"><h2 class="editorial-title">Editorial</h2><div class="editorial-text"><p>El Editor en Jefe y el Comité Editorial de la Revista Científica Bioingeniería se complace en presentar a la comunidad académica e investigadora la REVISTA BIOINGENIERÍA. Esta edición inaugural se constituye en un hito fundamental para nuestra institución, consolidando un espacio formal para la difusión de la producción científica generada tanto en nuestras aulas y laboratorios como por investigadores externos de trayectoria nacional e internacional.</p><p>Los trabajos que integran este número inicial reflejan un profundo compromiso con la generación de conocimiento aplicado y la investigación interdisciplinaria. Los artículos publicados abarcan áreas estratégicas del conocimiento, entre las que destacan la Ingeniería Agrícola, la Bioingeniería, la Biotecnología, Agroecología, la gestión de Recursos Naturales, Ciencias Ambientales, Ciencia de Alimentos, Biología Teórica y Aplicada, Ciencias afines. Cada uno de estos aportes ha sido seleccionado bajo un riguroso proceso de revisión, garantizando la calidad, originalidad y el rigor metodológico que exigen los estándares internacionales de edición científica.</p><p>Estamos convencidos de que los hallazgos y propuestas presentados en esta edición se constituirán en un valioso referente para académicos, profesionales, tomadores de decisiones y las comunidades rurales y urbanas que buscan soluciones innovadoras, sostenibles y resilientes ante los desafíos ambientales, climáticos y productivos de nuestra región y del país.</p><p>Invitamos a la comunidad científica a leer los artículos y a participar activamente en la Revista Científica Bioingeniería, enviando sus contribuciones científicas.</p></div><div class="signatures"><div class="signature-block"><strong>M.Sc. Ing. Pedro Roman Vallejos Mamani</strong>Director de Investigación Científica y Tecnológica (DICyT)<br>Universidad Técnica de Oruro</div><div class="signature-block"><strong>M.Sc. Ing. Milton Robert Pérez Lovera</strong>Director del Dpto. Ingeniería Agrícola, Recursos Naturales y Medio Ambiente<br>Facultad de Ciencias Agrarias y Naturales - UTO</div><div class="signature-block"><strong>M.Sc. Ing. Alfredo Ancasi Mamani</strong>Editor en Jefe<br>Revista Bioingeniería</div></div></div><h2 class="section-title">Volumen 1, Número 1 (2026)</h2><div class="article-card"><h3><a href="articulo-1.html">Diseño de un proceso tecnológico para la obtención de un embutido funcional de carne de llama (Lama glama) en el Altiplano de Oruro</a></h3><div class="authors">Nazaret Laura Janco</div><p>La transformación tecnológica de recursos biológicos representa una alternativa para fortalecer sistemas agroindustriales sostenibles en regiones altoandinas. El presente trabajo de investigación tien...</p><div class="buttons-container"><a href="articulo-1.html" class="btn btn-primary">📄 Ver Resumen Completo</a><a href="pdf/articulo_1.pdf" target="_blank" class="btn btn-pdf">⬇️ Descargar PDF</a></div></div><div class="article-card"><h3><a href="articulo-2.html">Efecto de la incorporación de sustrato orgánico sobre la biomasa de forraje verde hidropónico de cebada (Hordeum vulgare) bajo ambiente controlado en Opoqueri</a></h3><div class="authors">Roxana Marca Mamani • Erick Martin Moron Galarza</div><p>La producción de forraje verde hidropónico (FVH) se presenta como una alternativa tecnológica viable para zonas áridas con condiciones climáticas extremas que imposibilitan la producción forrajera con...</p><div class="buttons-container"><a href="articulo-2.html" class="btn btn-primary">📄 Ver Resumen Completo</a><a href="pdf/articulo_2.pdf" target="_blank" class="btn btn-pdf">⬇️ Descargar PDF</a></div></div><div class="article-card"><h3><a href="articulo-3.html">Evaluación de tecnologías mecánicas e hidráulicas para el control sostenible de Hymenoxis robusta en sistemas productivos de Oruro</a></h3><div class="authors">Pedro Choque Villca</div><p>La expansión de Hymenoxys robusta (Kellu kellu) representa una problemática ambiental y productiva en los sistemas ganaderos del Altiplano boliviano, debido a su elevada capacidad de adaptación, propa...</p><div class="buttons-container"><a href="articulo-3.html" class="btn btn-primary">📄 Ver Resumen Completo</a><a href="pdf/articulo_3.pdf" target="_blank" class="btn btn-pdf">⬇️ Descargar PDF</a></div></div><div class="article-card"><h3><a href="articulo-4.html">Fotogrametría con vehículos aéreos no tripulados para el análisis espacial en zonas de fragilidad ambiental: Caso Iroco, Oruro</a></h3><div class="authors">Alfredo Ancasi Mamani • Jhonny Antonio Bustamante Ocaña</div><p>El presente trabajo de investigación evalúa la aplicación de la fotogrametría mediante vehículos aéreos no tripulados (VANT) para el análisis espacial en ecosistemas de alta fragilidad ambiental, toma...</p><div class="buttons-container"><a href="articulo-4.html" class="btn btn-primary">📄 Ver Resumen Completo</a><a href="pdf/articulo_4.pdf" target="_blank" class="btn btn-pdf">⬇️ Descargar PDF</a></div></div><div class="article-card"><h3><a href="articulo-5.html">Evaluación de indicadores productivos y morfológicos de Chenopodium quinoa Willd. en un sistema de agricultura urbana ecológica del Altiplano de Oruro</a></h3><div class="authors">Gustavo Santiago Lucana Rafael</div><p>La agricultura urbana constituye una alternativa sostenible para fortalecer la seguridad alimentaria, promover el aprovechamiento eficiente de espacios reducidos y fomentar sistemas de producción comp...</p><div class="buttons-container"><a href="articulo-5.html" class="btn btn-primary">📄 Ver Resumen Completo</a><a href="pdf/articulo_5.pdf" target="_blank" class="btn btn-pdf">⬇️ Descargar PDF</a></div></div><div class="article-card"><h3><a href="articulo-6.html">Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia</a></h3><div class="authors">Milton Robert Pérez Lovera • Juan Carlos Montoya Choque</div><p>Los procesos de contaminación en la biota, han suscitado un interés cada vez mayor ante los efectos provocados en la biocenosis y el biotopo. El presente documento tiene por objetivo “Determinar la ac...</p><div class="buttons-container"><a href="articulo-6.html" class="btn btn-primary">📄 Ver Resumen Completo</a><a href="pdf/articulo_6.pdf" target="_blank" class="btn btn-pdf">⬇️ Descargar PDF</a></div></div></div>
-    <footer>
-        <p><strong>Revista Bioingeniería</strong> - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</p>
-        <p>Departamento de Ingeniería Agrícola, Recursos Naturales y Medio Ambiente</p>
-        <p>&copy; 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0</p>
-    </footer>
-</body></html>
+
+    <!-- Muestra de Artículo con Detalle y Contador Estadístico -->
+    <h2>Último Artículo Publicado</h2>
+    <div class="article-card">
+        <h3>Evaluación de la calidad del suelo y resiliencia en sistemas agroforestales</h3>
+        <div class="meta-info">
+            <strong>Autores:</strong> Departamento de Ingeniería Agrícola | <strong>DOI:</strong> 10.5281/zenodo.1234567 | <strong>Publicado:</strong> 2026
+        </div>
+        <p>Resumen: Este estudio examina los indicadores de sostenibilidad del suelo bajo esquemas de bioingeniería agrícola aplicados en zonas semiáridas...</p>
+        
+        <div class="stats-box">
+            <div class="stat-item">👁️ Vistas del Artículo: <span>1,240</span></div>
+            <div class="stat-item">📥 Descargas PDF: <span>385</span></div>
+            <button class="btn-download-report" onclick="alert('Generando informe estadístico en PDF/CSV...')">📊 Descargar Reporte Estadístico</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Pie de Página con los 3 Logos Solicitados -->
+<footer>
+    <p><strong>Revista Bioingeniería (BioIng)</strong> - Universidad Técnica de Oruro</p>
+    
+    <div class="footer-logos">
+        <!-- 1. Open Access -->
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="Acceso Abierto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Open_Access_logo_PLoS_transparent.svg/1024px-Open_Access_logo_PLoS_transparent.svg.png" alt="Open Access">
+        </a>
+        <!-- 2. Zenodo -->
+        <a href="https://zenodo.org/" target="_blank" title="Zenodo Repository">
+            <img src="https://about.zenodo.org/static/img/logos/zenodo-gradient-square.svg" alt="Zenodo">
+        </a>
+        <!-- 3. Google Scholar -->
+        <a href="https://scholar.google.com/" target="_blank" title="Google Scholar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar">
+        </a>
+    </div>
+
+    <div class="copyright">
+        © 2026 Revista Bioingeniería | Licencia Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)
+    </div>
+</footer>
+
+</body>
+</html>
