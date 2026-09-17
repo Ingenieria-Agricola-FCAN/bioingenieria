@@ -1,124 +1,151 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"/><title>Políticas | Bioingeniería</title>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Políticas Editoriales | Revista Bioingeniería</title>
 <style>
-        :root {
-            --azul-oscuro: #0a1f3a;
-            --azul-acento: #1a3c63;
-            --blanco: #ffffff;
-            --plomo-claro: #f0f2f5;
-            --plomo-texto: #555555;
-            --borde: #dcdcdc;
-            --verde-pdf: #198754;
-        }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--plomo-claro); color: #333; line-height: 1.6; }
-
-        /* HEADER Y LOGOS */
-        .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
-        .logo-box { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
-        .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
-        .journal-title-header { text-align: center; flex: 2; }
-        .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
-        .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
-
-        /* NAVEGACIÓN */
-        nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display:flex; justify-content: center; gap: 10px;}
-        nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; border-radius: 4px; transition: background 0.3s; font-weight: 500; }
-        nav a:hover { background-color: var(--azul-acento); }
-
-        /* CONTENEDOR PRINCIPAL */
-        .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: var(--blanco); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; }
-        .section-title { color: var(--azul-oscuro); border-bottom: 3px solid var(--azul-acento); padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em; }
-
-        /* SECCIÓN EDITORIAL */
-        .editorial-section { background: #fdfbf7; border-left: 5px solid #d4af37; padding: 25px; margin-bottom: 40px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .editorial-title { margin-top: 0; color: var(--azul-oscuro); font-size: 1.6em; text-transform: uppercase;}
-        .editorial-text { text-align: justify; margin-bottom: 20px; font-size: 1.05em; color: #444;}
-        .signatures { display: flex; justify-content: space-between; margin-top: 30px; gap: 20px;}
-        .signature-block { flex: 1; text-align: center; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 10px; }
-        .signature-block strong { color: var(--azul-oscuro); display: block; font-size: 1.1em;}
-
-        /* TARJETAS DE ARTÍCULOS */
-        .article-card { border: 1px solid var(--borde); border-radius: 8px; padding: 25px; margin-bottom: 20px; background: var(--blanco); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid var(--azul-oscuro); }
-        .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .article-card h3 { margin-top: 0; font-size: 1.3em; }
-        .article-card h3 a { color: var(--azul-oscuro); text-decoration: none; }
-        .article-card h3 a:hover { color: var(--azul-acento); text-decoration: underline; }
-        .authors { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95em; }
-        .buttons-container { margin-top: 20px; display: flex; gap: 15px; }
-
-        /* BOTONES */
-        .btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
-        .btn-primary { background: var(--azul-oscuro); color: var(--blanco); border: 1px solid var(--azul-oscuro); }
-        .btn-primary:hover { background: var(--blanco); color: var(--azul-oscuro); }
-        .btn-pdf { background: var(--blanco); color: var(--verde-pdf); border: 1px solid var(--verde-pdf); }
-        .btn-pdf:hover { background: var(--verde-pdf); color: var(--blanco); }
-
-        /* LISTA ARCHIVOS */
-        .archivo-lista { list-style: none; padding: 0; }
-        .archivo-lista li { margin-bottom: 10px; }
-        .archivo-lista a { display: block; padding: 15px; background: var(--plomo-claro); border: 1px solid var(--borde); border-radius: 5px; text-decoration: none; color: var(--azul-oscuro); font-weight: bold; transition: 0.2s;}
-        .archivo-lista a:hover { background: var(--azul-acento); color: var(--blanco); }
-
-        /* EQUIPO Y POLÍTICAS */
-        .miembro-equipo { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid var(--borde); }
-        .miembro-equipo h4 { margin: 0 0 5px 0; color: var(--azul-oscuro); font-size: 1.2em; }
-        .miembro-equipo p { margin: 0; color: var(--plomo-texto); }
-        .policy-box { background: var(--plomo-claro); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-
-        footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #27ae60; padding-bottom: 10px; margin-bottom: 30px; }
+        
+        details { margin-bottom: 15px; border: 1px solid #e0e0e0; border-radius: 5px; overflow: hidden; transition: all 0.3s ease; }
+        summary { font-size: 1.15em; font-weight: bold; background-color: #2c3e50; color: white; cursor: pointer; padding: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::-webkit-details-marker { display: none; }
+        summary:after { content: '+'; font-size: 1.5em; color: #27ae60; }
+        details[open] summary:after { content: '-'; color: #e74c3c; }
+        details[open] { border-color: #2c3e50; box-shadow: 0 2px 5px rgba(0,0,0,0.15); }
+        .content { padding: 20px; background-color: #fafafa; border-top: 1px solid #e0e0e0; }
+        
+        h3 { color: #2980b9; margin-top: 0; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; }
+        .logos { margin: 20px 0; display: flex; justify-content: center; gap: 20px; align-items: center; }
+        .logos img { height: 40px; opacity: 0.8; transition: opacity 0.3s; }
+        .logos img:hover { opacity: 1; }
+        .metrics { margin-top: 15px; font-size: 0.9em; color: #7f8c8d; }
+        .licencia { font-size: 0.85em; color: #555; margin-top: 15px;}
     </style>
 </head>
 <body>
-<div class="top-header">
-<div class="logos-container">
-<div class="logo-box">
-<img alt="Logo UTO" onerror="this.outerHTML='&lt;span&gt;Logo UTO (Subir logo_uto.png a carpeta img)&lt;/span&gt;'" src="img/logo_uto.png"/>
-</div>
-<div class="journal-title-header">
-<h1>Revista Bioingeniería</h1>
-<p>Órgano Oficial de Publicación Científica</p>
-<p><small>ISSN: En trámite</small></p>
-</div>
-<div class="logo-box">
-<img alt="Logo Depto" onerror="this.outerHTML='&lt;span&gt;Logo Dpto (Subir logo_dpto.png a carpeta img)&lt;/span&gt;'" src="img/logo_dpto.png"/>
-</div>
-<div class="logo-box">
-<img alt="Logo Revista" onerror="this.outerHTML='&lt;span&gt;Logo Revista (Subir logo_revista.png a carpeta img)&lt;/span&gt;'" src="img/logo_revista.png"/>
-</div>
-</div>
-</div>
-<nav>
-<a href="index.html">🏠 Número Actual</a>
-<a href="archivo.html">📚 Archivo de Ediciones</a>
-<a href="equipo.html">👥 Equipo Editorial</a>
-<a href="politicas.html">⚖️ Políticas y Envíos</a>
-</nav>
 <div class="container">
-<h2 class="section-title">Políticas de la Revista y Directrices</h2>
-<div class="policy-box">
-<h3 style="color: var(--azul-oscuro); margin-top:0;">1. Enfoque y Alcance</h3>
-<p>La <strong>Revista Bioingeniería</strong> publica investigaciones originales en áreas estratégicas que incluyen: Ingeniería Agrícola, Bioingeniería, Biotecnología, Agroecología, Gestión de Recursos Naturales, Ciencias Ambientales, Ciencia de Alimentos, y Biología Teórica y Aplicada.</p>
+<h1>Políticas Editoriales</h1>
+<details>
+<summary>1. Acerca de la revista</summary>
+<div class="content">
+<p><strong>Bioingeniería (BioIng)</strong> es una revista académica, revisada por pares y de acceso abierto, editada académicamente por el Departamento de Ingeniería Agrícola, Recursos Naturales y Medio Ambiente de la Universidad Técnica de Oruro (Bolivia). La revista publica artículos de investigación originales y artículos de revisión en inglés y español y aplica revisión externa por pares doble ciego a la investigación y revisión de manuscritos.</p>
+<p>La revista acepta manuscritos que aporten una contribución académica clara en una o más de las siguientes áreas:</p>
+<ul>
+<li>Ciencia de la sostenibilidad e implementación de los Objetivos de Desarrollo Sostenible.</li>
+<li>Mitigación del cambio climático, adaptación, vulnerabilidad, resiliencia y servicios climáticos.</li>
+<li>Gestión ambiental, evaluación ambiental, prevención de la contaminación y restauración.</li>
+<li>Biodiversidad, conservación, servicios ecosistémicos y uso sostenible de los recursos naturales.</li>
+<li>Agricultura sostenible, agroecología, gestión del suelo y del agua, y sistemas agroalimentarios resilientes.</li>
+<li>Energías renovables, transición energética, eficiencia energética y desarrollo bajo en carbono.</li>
+<li>Economía circular, producción más limpia, gestión de residuos y eficiencia de los recursos.</li>
+<li>Desarrollo territorial, rural y regional vinculado a resultados de sostenibilidad.</li>
+<li>Gobernanza ambiental, políticas públicas, instituciones y dimensiones socioeconómicas de la sostenibilidad.</li>
+<li>Ciudades sostenibles, infraestructura, movilidad y resiliencia comunitaria.</li>
+<li>Innovación tecnológica, digital, social y organizativa conectada con desafíos de sostenibilidad.</li>
+<li>Biotecnología vinculada a la preservación del medio ambiente.</li>
+<li>Gestión de riesgos, resiliencia ante desastres y adaptación de sistemas socioecológicos.</li>
+<li>Enfoques integrados para la gestión del agua, la industria de alimentos, la energía, la tierra y los ecosistemas.</li>
+</ul>
 </div>
-<div class="policy-box">
-<h3 style="color: var(--azul-oscuro); margin-top:0;">2. Proceso de Evaluación por Pares</h3>
-<p>Todo manuscrito es evaluado mediante <strong>revisión por pares doble ciego (double-blind peer review)</strong>. Los tiempos estimados son de 4 a 8 semanas para el dictamen inicial.</p>
+</details>
+<details>
+<summary>2. Instrucciones para autores</summary>
+<div class="content">
+<p>Bioingeniería (BioIng) acepta artículos de investigaciones originales, artículos de revisión, revisiones sistemáticas y comunicaciones breves.</p>
+<h3>Archivos de presentación y revisión doble ciego</h3>
+<p>El archivo principal del manuscrito debe estar anonimizado. No debe contener nombres de autores, afiliaciones, correos ni agradecimientos que revelen la identidad.</p>
+<ul>
+<li>El manuscrito debe enviarse en formato DOCX utilizando la plantilla oficial. Tablas y ecuaciones editables.</li>
+<li>Los autores son responsables de eliminar metadatos o comentarios ocultos antes de la entrega.</li>
+</ul>
+<h3>Información del autor (Página del título separada)</h3>
+<ul>
+<li>Nombre completo en orden de publicación.</li>
+<li>Afiliación institucional principal (departamento, institución, ciudad, país).</li>
+<li>Identificador ORCID para cada autor.</li>
+<li>Autor de correspondencia y correo electrónico válido.</li>
+<li>Confirmación de criterios de autoría.</li>
+</ul>
+<h3>Título, resumen y palabras clave</h3>
+<p>Título conciso. Resumen completo (objetivo, metodología, resultados, conclusiones) sin citas. 3 a 6 palabras clave. Título, resumen y palabras clave deben enviarse en español e inglés.</p>
 </div>
-<div class="policy-box">
-<h3 style="color: var(--azul-oscuro); margin-top:0;">3. Originalidad y Plagio</h3>
-<p>Los autores deben garantizar que sus trabajos son inéditos. La revista utiliza software especializado para la detección de similitudes. Aquellos manuscritos que superen el límite aceptable de coincidencia sin la debida citación serán rechazados automáticamente.</p>
+</details>
+<details>
+<summary>3. Estructura por tipo de artículo</summary>
+<div class="content">
+<ul>
+<li><strong>Artículo de investigación original:</strong> Introducción, Materiales y Métodos, Resultados, Discusión y Conclusiones.</li>
+<li><strong>Artículo de revisión:</strong> Revisión crítica o del estado del arte. Explicar el propósito y selección de fuentes.</li>
+<li><strong>Revisión sistemática:</strong> Seguir directrices PRISMA 2020. Indicar criterios, estrategias de búsqueda y registro de protocolo si aplica.</li>
+<li><strong>Comunicación breve:</strong> Hallazgo, método o validación concisa pero metodológicamente completa.</li>
+</ul>
+<h3>Tablas, figuras y datos</h3>
+<ul>
+<li>Numeradas consecutivamente y citadas en el texto. Sistema Internacional de Unidades (SI).</li>
+<li>Ecuaciones editables. Software, código o datos suplementarios deben enlazarse a repositorios.</li>
+</ul>
+<h3>Aprobación ética y Declaraciones obligatorias</h3>
+<p>Se debe incluir: Contribuciones de los autores (CRediT), Financiación, Conflictos de intereses, Aprobación ética, Disponibilidad de datos, y Agradecimientos.</p>
+<h3>Referencias: Formato APA</h3>
+<p>Uso de estilo APA numeradas consecutivamente. Incluir DOIs activos. Se prohíbe el exceso de autocitas o manipulación de métricas.</p>
 </div>
-<div class="policy-box">
-<h3 style="color: var(--azul-oscuro); margin-top:0;">4. Plantilla, Envíos y Convocatoria</h3>
-<p>Los manuscritos deben enviarse respetando estrictamente el formato de la revista. Asimismo, invitamos a la comunidad académica a revisar nuestra convocatoria actual para el envío de artículos científicos.</p>
-<div style="display: flex; gap: 15px; margin-top: 20px;">
-<!-- Estos enlaces buscarán los archivos dentro de la nueva carpeta "archivos" -->
-<a class="btn btn-primary" download="" href="archivos/plantilla.docx" style="text-decoration:none;">📥 Descargar Plantilla Oficial (Word)</a>
-<a class="btn btn-pdf" href="archivos/convocatoria.pdf" style="text-decoration:none;" target="_blank">📄 Descargar Convocatoria (PDF)</a>
+</details>
+<details>
+<summary>4. Proceso de revisión por pares</summary>
+<div class="content">
+<p>Utilizamos revisión externa <strong>doble ciego</strong>. Identidades confidenciales. La decisión de publicación recae en el editor jefe basado en los informes de al menos dos revisores independientes.</p>
+<h3>Resultados editoriales posibles</h3>
+<ul>
+<li><strong>Rechazo inicial:</strong> Fuera de alcance o no cumple mínimos éticos/científicos.</li>
+<li><strong>Revisión importante:</strong> Cambios sustanciales requeridos.</li>
+<li><strong>Revisión menor:</strong> Correcciones específicas.</li>
+<li><strong>Rechazo tras revisión:</strong> Evidencia o validez insuficiente.</li>
+<li><strong>Aceptado:</strong> Supera satisfactoriamente todas las etapas.</li>
+</ul>
 </div>
+</details>
+<details>
+<summary>5. Política de ética y malas prácticas</summary>
+<div class="content">
+<p>Basada en las Prácticas Fundamentales de <strong>COPE</strong>.</p>
+<ul>
+<li><strong>Editores:</strong> Evalúan sin discriminación. Mantienen confidencialidad y actúan ante sospechas de plagio o manipulación.</li>
+<li><strong>Revisores:</strong> Declaran conflictos de interés, mantienen confidencialidad, y no usan IA pública para analizar manuscritos inéditos.</li>
+<li><strong>Autores:</strong> Garantizan originalidad, citación precisa, evitan envíos simultáneos o publicaciones redundantes, y notifican errores posteriores a la publicación.</li>
+</ul>
 </div>
+</details>
+<details>
+<summary>6. Política sobre inteligencia artificial generativa</summary>
+<div class="content">
+<p>Las herramientas de IA no pueden figurar como autores. La autoría exige responsabilidad humana exclusiva.</p>
+<p><strong>Apoyo permitido:</strong> Mejora de lenguaje, traducción o generación de ideas, siempre bajo revisión crítica humana. El texto final es responsabilidad total del autor.</p>
+<p><strong>Divulgación:</strong> El uso sustancial de IA para análisis, código o redacción profunda debe declararse. Revisiones ortográficas rutinarias no requieren declaración.</p>
+<p>Se prohíben datos inventados, citas falsas o referencias "alucinadas" por la IA. Todo dato debe ser validado.</p>
 </div>
+</details>
+<details>
+<summary>7. Política contra el plagio y similitud</summary>
+<div class="content">
+<p>Se utilizan herramientas de detección de similitud. No hay un umbral automático (%); se evalúa el contexto de las coincidencias.</p>
+<h3>Prácticas inaceptables:</h3>
+<ul>
+<li>Copia de texto, datos o ideas sin atribución.</li>
+<li>Plagio de traducción.</li>
+<li>Publicación "salami" o fragmentación injustificada.</li>
+<li>Ocultación de reutilización de fuentes con citas engañosas.</li>
+</ul>
+<p>El plagio sustancial conlleva el rechazo del manuscrito y posible notificación institucional o retractación pública si se descubre post-publicación.</p>
+</div>
+</details>
 
 <div id="botones-descarga" style="text-align: center; margin: 40px auto; padding: 30px; background: #f8f9fa; border-radius: 8px; max-width: 800px; border: 1px solid #e9ecef;">
 <h3 style="color: #2c3e50; margin-top: 0; margin-bottom: 25px;">📥 Documentos para Autores</h3>
@@ -139,4 +166,6 @@
             © 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0
         </div>
 </footer>
-</body></html>
+</div>
+</body>
+</html>
