@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia</title>
-    <style>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><title>Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia</title>
+<style>
         :root {
-            --azul-oscuro: #0a1f3a; 
+            --azul-oscuro: #0a1f3a;
             --azul-acento: #1a3c63;
             --blanco: #ffffff;
             --plomo-claro: #f0f2f5;
@@ -10,24 +11,35 @@
             --verde-pdf: #198754;
         }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--plomo-claro); color: #333; line-height: 1.6; }
+
+        /* HEADER Y LOGOS */
         .top-header { background-color: var(--blanco); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--azul-oscuro); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .logos-container { display: flex; gap: 20px; align-items: center; width: 100%; justify-content: space-between; }
         .logo-box { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
         .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
         .journal-title-header { text-align: center; flex: 2; }
         .journal-title-header h1 { margin: 0; color: var(--azul-oscuro); font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
         .journal-title-header p { margin: 0; color: var(--plomo-texto); font-style: italic; }
+
+        /* NAVEGACIÓN */
         nav { background-color: var(--azul-oscuro); padding: 12px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display:flex; justify-content: center; gap: 10px;}
         nav a { color: var(--blanco); text-decoration: none; padding: 10px 20px; border-radius: 4px; transition: background 0.3s; font-weight: 500; }
         nav a:hover { background-color: var(--azul-acento); }
+
+        /* CONTENEDOR PRINCIPAL */
         .container { max-width: 1000px; margin: 40px auto; padding: 30px; background: var(--blanco); box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; }
         .section-title { color: var(--azul-oscuro); border-bottom: 3px solid var(--azul-acento); padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em; }
+
+        /* SECCIÓN EDITORIAL */
         .editorial-section { background: #fdfbf7; border-left: 5px solid #d4af37; padding: 25px; margin-bottom: 40px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .editorial-title { margin-top: 0; color: var(--azul-oscuro); font-size: 1.6em; text-transform: uppercase;}
         .editorial-text { text-align: justify; margin-bottom: 20px; font-size: 1.05em; color: #444;}
         .signatures { display: flex; justify-content: space-between; margin-top: 30px; gap: 20px;}
         .signature-block { flex: 1; text-align: center; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 10px; }
         .signature-block strong { color: var(--azul-oscuro); display: block; font-size: 1.1em;}
+
+        /* TARJETAS DE ARTÍCULOS */
         .article-card { border: 1px solid var(--borde); border-radius: 8px; padding: 25px; margin-bottom: 20px; background: var(--blanco); transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid var(--azul-oscuro); }
         .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .article-card h3 { margin-top: 0; font-size: 1.3em; }
@@ -35,50 +47,62 @@
         .article-card h3 a:hover { color: var(--azul-acento); text-decoration: underline; }
         .authors { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95em; }
         .buttons-container { margin-top: 20px; display: flex; gap: 15px; }
+
+        /* BOTONES */
         .btn { display: inline-block; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
         .btn-primary { background: var(--azul-oscuro); color: var(--blanco); border: 1px solid var(--azul-oscuro); }
         .btn-primary:hover { background: var(--blanco); color: var(--azul-oscuro); }
         .btn-pdf { background: var(--blanco); color: var(--verde-pdf); border: 1px solid var(--verde-pdf); }
         .btn-pdf:hover { background: var(--verde-pdf); color: var(--blanco); }
+
+        /* LISTA ARCHIVOS */
         .archivo-lista { list-style: none; padding: 0; }
         .archivo-lista li { margin-bottom: 10px; }
         .archivo-lista a { display: block; padding: 15px; background: var(--plomo-claro); border: 1px solid var(--borde); border-radius: 5px; text-decoration: none; color: var(--azul-oscuro); font-weight: bold; transition: 0.2s;}
         .archivo-lista a:hover { background: var(--azul-acento); color: var(--blanco); }
+
+        /* EQUIPO Y POLÍTICAS */
         .miembro-equipo { margin-bottom: 20px; padding: 15px; border-bottom: 1px solid var(--borde); }
         .miembro-equipo h4 { margin: 0 0 5px 0; color: var(--azul-oscuro); font-size: 1.2em; }
         .miembro-equipo p { margin: 0; color: var(--plomo-texto); }
         .policy-box { background: var(--plomo-claro); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+
         footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
     </style>
-<meta name="citation_author" content="Milton Robert Pérez Lovera"><meta name="citation_author_institution" content="Universidad Técnica de Oruro"><meta name="citation_author" content="Juan Carlos Montoya Choque"><meta name="citation_author_institution" content="Universidad Técnica de Oruro"><meta name="citation_title" content="Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia"><meta name="citation_journal_title" content="Bioingeniería"><meta name="citation_publication_date" content="2026/04/15"><meta name="citation_pdf_url" content="https://Ingenieria-Agricola-FCAN.github.io/bioingenieria/pdf/articulo_6.pdf"></head><body>
-    <div class="top-header">
-        <div class="logos-container">
-            <div class="logo-box">
-                <img src="img/logo_uto.png" alt="Logo UTO" onerror="this.outerHTML='<span>Logo UTO (Subir logo_uto.png a carpeta img)</span>'">
-            </div>
-            <div class="journal-title-header">
-                <h1>Revista Bioingeniería</h1>
-                <p>Órgano Oficial de Publicación Científica</p>
-                <p><small>ISSN: En trámite</small></p>
-            </div>
-            <div class="logo-box">
-                <img src="img/logo_dpto.png" alt="Logo Depto" onerror="this.outerHTML='<span>Logo Dpto (Subir logo_dpto.png a carpeta img)</span>'">
-            </div>
-            <div class="logo-box">
-                <img src="img/logo_revista.png" alt="Logo Revista" onerror="this.outerHTML='<span>Logo Revista (Subir logo_revista.png a carpeta img)</span>'">
-            </div>
-        </div>
-    </div>
-    <nav>
-        <a href="index.html">🏠 Número Actual</a>
-        <a href="archivo.html">📚 Archivo de Ediciones</a>
-        <a href="equipo.html">👥 Equipo Editorial</a>
-        <a href="politicas.html">⚖️ Políticas y Envíos</a>
-    </nav>
-<div class="container"><h1 style="color: var(--azul-oscuro);">Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia</h1><div style="background: var(--plomo-claro); padding: 15px; border-radius: 8px; margin-bottom: 20px;"><h4 style="margin:0 0 10px 0;">Autores:</h4><ul style="list-style:none; padding:0; margin:0; line-height: 1.8;"><li><strong>Milton Robert Pérez Lovera</strong> <a href="https://orcid.org/0009-0005-2672-8475" target="_blank" style="text-decoration:none;">🆔</a><br><small>Universidad Técnica de Oruro</small></li><li><strong>Juan Carlos Montoya Choque</strong> <a href="https://orcid.org/0009-0007-4081-1624" target="_blank" style="text-decoration:none;">🆔</a><br><small>Universidad Técnica de Oruro</small></li></ul></div><h3 style="border-bottom: 2px solid var(--borde); padding-bottom: 5px;">Resumen</h3><p style="text-align: justify; font-size: 1.05em;">Los procesos de contaminación en la biota, han suscitado un interés cada vez mayor ante los efectos provocados en la biocenosis y el biotopo. El presente documento tiene por objetivo “Determinar la acumulación de metales pesados en Schoenoplectus californicus tatora”, reflejando el contenido de metales pesados en esta especie vegetal (totora) en el ecotono del lago Uru Uru, ante los procesos de contaminación natural y antrópica, este último con mayor énfasis la actividad minera. El Potencial Relativo de Bioconcentración (PRB) estudiado en Schoenoplectus californicus ssp. tatora, indica el valor máximo para: Tallos+hojas: el Zn, seguido de Sb, As y Pb; Rizomas: el Sb, seguido de Zn y Pb; y Raíces: el Sb, seguido de Zn-Ag, Pb, Mn y As. Este comportamiento anormal, podría deberse a la actividad minera de la zona y su efecto contaminante sobretodo de metales pesados, y su biococnentración en Schoenoplectus californicus ssp. tatora, importante recurso forrajero, principalmente para el ganado ovino. </p><p><strong>Palabras clave:</strong> minería, metales pesados, bioconcentración</p><br><a href="pdf/articulo_6.pdf" target="_blank" class="btn btn-pdf" style="font-size: 1.1em; padding: 15px 30px;">📄 Descargar Artículo en PDF</a></div>
-    <footer>
-        <p><strong>Revista Bioingeniería</strong> - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</p>
-        <p>Departamento de Ingeniería Agrícola, Recursos Naturales y Medio Ambiente</p>
-        <p>&copy; 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0</p>
-    </footer>
+<meta content="Milton Robert Pérez Lovera" name="citation_author"/><meta content="Universidad Técnica de Oruro" name="citation_author_institution"/><meta content="Juan Carlos Montoya Choque" name="citation_author"/><meta content="Universidad Técnica de Oruro" name="citation_author_institution"/><meta content="Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia" name="citation_title"/><meta content="Bioingeniería" name="citation_journal_title"/><meta content="2026/04/15" name="citation_publication_date"/><meta content="10.5281/zenodo.22842204" name="citation_doi"/><meta content="https://zenodo.org/records/22842204/files/articulo.pdf" name="citation_pdf_url"/></head><body>
+<div class="top-header">
+<div class="logos-container">
+<div class="logo-box">
+<img alt="Logo UTO" onerror="this.outerHTML='&lt;span&gt;Logo UTO (Subir logo_uto.png a carpeta img)&lt;/span&gt;'" src="img/logo_uto.png"/>
+</div>
+<div class="journal-title-header">
+<h1>Revista Bioingeniería</h1>
+<div class="panel-metricas" style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-left: 4px solid #0056b3; border-radius: 4px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+<a href="https://zenodo.org/records/22842204" style="background: #0056b3; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" target="_blank">📥 Ver PDF y Estadísticas (Zenodo)</a>
+<a href="https://doi.org/10.5281/zenodo.22842204" style="background: white; color: #333; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; border: 1px solid #ccc;" target="_blank">🔗 DOI: 10.5281/zenodo.22842204</a>
+</div>
+
+<p>Órgano Oficial de Publicación Científica</p>
+<p><small>ISSN: En trámite</small></p>
+</div>
+<div class="logo-box">
+<img alt="Logo Depto" onerror="this.outerHTML='&lt;span&gt;Logo Dpto (Subir logo_dpto.png a carpeta img)&lt;/span&gt;'" src="img/logo_dpto.png"/>
+</div>
+<div class="logo-box">
+<img alt="Logo Revista" onerror="this.outerHTML='&lt;span&gt;Logo Revista (Subir logo_revista.png a carpeta img)&lt;/span&gt;'" src="img/logo_revista.png"/>
+</div>
+</div>
+</div>
+<nav>
+<a href="index.html">🏠 Número Actual</a>
+<a href="archivo.html">📚 Archivo de Ediciones</a>
+<a href="equipo.html">👥 Equipo Editorial</a>
+<a href="politicas.html">⚖️ Políticas y Envíos</a>
+</nav>
+<div class="container"><h1 style="color: var(--azul-oscuro);">Estudio de metales pesados en Schoenoplectus californicus ssp. tatora (totora), lago Uru Uru - Altiplano central de Bolivia</h1><div style="background: var(--plomo-claro); padding: 15px; border-radius: 8px; margin-bottom: 20px;"><h4 style="margin:0 0 10px 0;">Autores:</h4><ul style="list-style:none; padding:0; margin:0; line-height: 1.8;"><li><strong>Milton Robert Pérez Lovera</strong> <a href="https://orcid.org/0009-0005-2672-8475" style="text-decoration:none;" target="_blank">🆔</a><br/><small>Universidad Técnica de Oruro</small></li><li><strong>Juan Carlos Montoya Choque</strong> <a href="https://orcid.org/0009-0007-4081-1624" style="text-decoration:none;" target="_blank">🆔</a><br/><small>Universidad Técnica de Oruro</small></li></ul></div><h3 style="border-bottom: 2px solid var(--borde); padding-bottom: 5px;">Resumen</h3><p style="text-align: justify; font-size: 1.05em;">Evaluación de la concentración y bioacumulación de metales pesados en tejidos vasculares de Schoenoplectus californicus ssp. tatora en áreas de influencia del Lago Uru Uru, aportando datos para el monitoreo ambiental acuático.</p><p><strong>Palabras clave:</strong> Metales pesados, Schoenoplectus californicus, Totora, Lago Uru Uru, Biomonitoreo</p><br/><a class="btn btn-pdf" href="pdf/articulo_6.pdf" style="font-size: 1.1em; padding: 15px 30px;" target="_blank">📄 Descargar Artículo en PDF</a></div>
+<footer>
+<p><strong>Revista Bioingeniería</strong> - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</p>
+<p>Departamento de Ingeniería Agrícola y Recursos Naturales</p>
+<p>© 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0</p>
+</footer>
 </body></html>
