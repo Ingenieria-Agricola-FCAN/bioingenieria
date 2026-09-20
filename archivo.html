@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"/><title>Archivo | Bioingeniería</title>
-<style>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Archivo | Bioingeniería</title>
+    <style>
         :root {
             --azul-oscuro: #0a1f3a;
             --azul-acento: #1a3c63;
@@ -70,51 +69,34 @@
         footer { background: var(--azul-oscuro); color: var(--blanco); text-align: center; padding: 25px; margin-top: 50px; font-size: 0.9em; }
     </style>
 </head><body>
-<div class="top-header">
-<div class="logos-container">
-<div class="logo-box">
-<img alt="Logo UTO" onerror="this.outerHTML='&lt;span&gt;Logo UTO (Subir logo_uto.png a carpeta img)&lt;/span&gt;'" src="img/logo_uto.png"/>
-</div>
-<div class="journal-title-header">
-<h1>Revista Bioingeniería</h1>
-<p>Órgano Oficial de Publicación Científica</p>
-<p><small>ISSN: En trámite</small></p>
-</div>
-<div class="logo-box">
-<img alt="Logo Depto" onerror="this.outerHTML='&lt;span&gt;Logo Dpto (Subir logo_dpto.png a carpeta img)&lt;/span&gt;'" src="img/logo_dpto.png"/>
-</div>
-<div class="logo-box">
-<img alt="Logo Revista" onerror="this.outerHTML='&lt;span&gt;Logo Revista (Subir logo_revista.png a carpeta img)&lt;/span&gt;'" src="img/logo_revista.png"/>
-</div>
-</div>
-</div>
-<nav>
-<a href="index.html">🏠 Número Actual</a>
-<a href="archivo.html">📚 Archivo de Ediciones</a>
-<a href="equipo.html">👥 Equipo Editorial</a>
-<a href="politicas.html">⚖️ Políticas y Envíos</a>
-</nav>
-
-<div style="max-width: 800px; margin: 25px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-<input id="searchInput" onkeyup="filtrarArticulos()" placeholder="🔍 Buscar artículo por título, autor, volumen o palabra clave..." style="width: 100%; padding: 14px; font-size: 16px; border: 2px solid #2980b9; border-radius: 6px; box-sizing: border-box; outline: none;" type="text"/>
-</div>
-<div class="container articulo-buscable"><h2 class="section-title">Archivo de Ediciones</h2><ul class="archivo-lista"><li><a href="index.html">👉 Volumen 1, Número 1 (2026) - Edición Inaugural (Actual)</a></li><li><a href="#" style="color:#888; background:#eee; cursor:not-allowed;">Volumen 2, Número 1 (Próximamente)</a></li></ul></div>
-<footer style="background: #2c3e50; color: white; text-align: center; padding: 25px 20px; margin-top: 40px; border-top: 4px solid #27ae60;">
-<p style="margin: 5px 0; font-size: 1.1em;"><strong>Revista Bioingeniería - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</strong></p>
-<p style="margin: 5px 0;">Departamento de Ingeniería Agrícola, Recursos Naturales y Medio Ambiente</p>
-<div style="font-size:0.85em; opacity:0.8; margin-top: 15px;">
-            © 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0
+    <div class="top-header">
+        <div class="logos-container">
+            <div class="logo-box">
+                <img src="img/logo_uto.png" alt="Logo UTO" onerror="this.outerHTML='<span>Logo UTO (Subir logo_uto.png a carpeta img)</span>'">
+            </div>
+            <div class="journal-title-header">
+                <h1>Revista Científica Bioingeniería</h1>
+                <p>Órgano Oficial de Publicación Científica</p>
+                <p><small>ISSN: En trámite</small></p>
+            </div>
+            <div class="logo-box">
+                <img src="img/logo_dpto.png" alt="Logo Depto" onerror="this.outerHTML='<span>Logo Dpto (Subir logo_dpto.png a carpeta img)</span>'">
+            </div>
+            <div class="logo-box">
+                <img src="img/logo_revista.png" alt="Logo Revista" onerror="this.outerHTML='<span>Logo Revista (Subir logo_revista.png a carpeta img)</span>'">
+            </div>
         </div>
-</footer>
-
-<script id="script-buscador">
-                function filtrarArticulos() {
-                    let input = document.getElementById('searchInput').value.toLowerCase();
-                    let articulos = document.getElementsByClassName('articulo-buscable');
-                    for (let i = 0; i < articulos.length; i++) {
-                        let texto = articulos[i].innerText.toLowerCase();
-                        articulos[i].style.display = texto.includes(input) ? "" : "none";
-                    }
-                }
-                </script>
+    </div>
+    <nav>
+        <a href="index.html">🏠 Número Actual</a>
+        <a href="archivo.html">📚 Archivo de Ediciones</a>
+        <a href="equipo.html">👥 Equipo Editorial</a>
+        <a href="politicas.html">⚖️ Políticas y Envíos</a>
+    </nav>
+<div class="container"><h2 class="section-title">Archivo de Ediciones</h2><ul class="archivo-lista"><li><a href="index.html">👉 Volumen 1, Número 1 (2026) - Edición Inaugural (Actual)</a></li><li><a href="#" style="color:#888; background:#eee; cursor:not-allowed;">Volumen 2, Número 1 (Próximamente)</a></li></ul></div>
+    <footer>
+        <p><strong>Revista Científica Bioingeniería</strong> - Universidad Técnica de Oruro (UTO) | Facultad de Ciencias Agrarias y Naturales (FCAN)</p>
+        <p>Departamento de Ingeniería Agrícola y Recursos Naturales</p>
+        <p>&copy; 2026 | Acceso Abierto bajo licencia Creative Commons BY-NC 4.0</p>
+    </footer>
 </body></html>
